@@ -26,6 +26,7 @@ jobs:
           ruby --version
           node --version
           clang --version
+          clang++ --version
 
       # Written by Xcode scheme pre-actions and read before ENVFILE. A copy on the runner would
       # override every fixture in the suite, so the run refuses to start with one present.

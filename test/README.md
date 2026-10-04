@@ -8,9 +8,10 @@ npm test
 
 The Apple suite also compiles its Foundation diagnostic harness on macOS. That
 harness is skipped on other platforms. Tests use temporary files with dummy
-values. The Windows generator tests also compile and execute the generated C++
-constants when `clang++` is available; this does not build the Windows native
-bridge. Run in an isolated environment: the Ruby runner refuses to run if the
+values. The Windows generator tests compile and execute both generated C++
+constant forms when `clang++` is available, and are skipped otherwise. They
+compare runtime values, independently of the C++ literal syntax, without building
+the Windows native bridge. Run in an isolated environment: the Ruby runner refuses to run if the
 legacy machine-global `/tmp/envfile` selector exists.
 
 The Android parser fixtures require Java 17+ and the checked-in Gradle wrapper:
